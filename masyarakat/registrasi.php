@@ -5,11 +5,11 @@ require '../koneksi.php';
 session_start();
 
 if (isset($_POST['nama']) && isset($_POST['password'])){
-    $nik = htmlEntities($_POST['nik'],ENT_QUOTES);
-    $nama = htmlEntities($_POST['nama'],ENT_QUOTES);
-    $telp = htmlEntities($_POST['telp'],ENT_QUOTES);
-    $username = htmlEntities($_POST['username'],ENT_QUOTES);
-    $password = md5(htmlEntities($_POST['password'],ENT_QUOTES));
+    $nik = $_POST['nik'];
+    $nama = $_POST['nama'];
+    $telp = $_POST['telp'];
+    $username = $_POST['username'];
+    $password = md5($_POST['password']);
 
     $query = "INSERT INTO `masyarakat` (nik, nama, telp, username, password) VALUES ('$nik','$nama','$telp', '$username','$password')";
     $result = mysqli_query($koneksi, $query);

@@ -71,7 +71,7 @@ require '../koneksi.php';
                         <div class="card-body">
                             
                         <?php 
-                if(isset($_GET['id_pengaduan'])){
+                    if(isset($_GET['id_pengaduan'])){
                     include '../koneksi.php';
                     $nomor=1;
                     $id_pengaduan = $_GET['id_pengaduan'];
